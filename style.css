@@ -1,0 +1,287 @@
+/* Reset and basic styling */
+
+:root {
+    --font-color: #f0f4ef;
+    --color1: #BFCC94;
+    --color2: #B4CDED;
+    --color3: #344966;
+    --color4: #0D1821;
+    --nice-color-actaully: #e4e2dd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    /* color: var(--font-color); */
+    cursor: none;
+}
+
+
+html,
+body {
+    height: 100%;
+}
+
+.cursor-dot {
+    width: 5px;
+    height: 5px;
+    background-color: white;
+}
+
+.cursor-outline {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #ffffff80;
+}
+
+
+.cursor-dot,
+.cursor-outline {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+/* Navigation styling */
+nav {
+    padding: 18px;
+    margin-bottom: 10px;
+    z-index: 10;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.logo {
+    margin-right: auto;
+    width: 150px;
+}
+
+a {
+    text-decoration: none;
+    padding: 10px 12px;
+    border-radius: 10px;
+    margin: 14px;
+    transition: opacity 1s ease;
+    opacity: 0.5;
+    font-weight: bold;
+    color: white;
+
+}
+
+a:hover {
+    opacity: 1;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+
+}
+
+.fa-solid {
+    font-size: 0px;
+}
+
+@media (max-width: 700px) {
+    .fa-bars {
+        font-size: 16px;
+        margin-left: auto;
+    }
+
+    .logo {
+        display: inline
+    }
+
+    ul li {
+        display: none;
+    }
+
+
+}
+
+.hero {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.bg-img {
+    background-color: var(--color3);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    ;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+
+}
+
+
+.bg-col {
+    /* background-color:var(--color4); */
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    position: absolute;
+    z-index: -1;
+}
+
+.content {
+    width: 50%;
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    text-align: left;
+    /* border: 10px solid white; */
+    color: white;
+    overflow: hidden;
+    padding: 14px 0px;
+}
+
+.content h1 {
+    font-size: 50px;
+    margin-bottom: 25px;
+    font-weight: 900;
+}
+
+.content p {
+    line-height: 25px;
+}
+
+
+@keyframes animation {
+    0% {
+        transform: translateY(10px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+.fa-angles-down {
+    animation: animation 2s infinite;
+    position: relative;
+    color: white;
+    z-index: 2;
+    font-size: 20px;
+}
+
+.down-arrow {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.side-img {
+    width: 45%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+
+}
+
+@media (max-width: 800px) {
+
+    .side-img {
+        left: 30%;
+
+    }
+
+    .content {
+        z-index: 2;
+        width: 90%;
+        margin: atuo;
+        transform: translate(-90%, -90%);
+        left: 85%;
+        top: 60%;
+        text-align: center;
+
+    }
+
+    content h1 {
+        font-size: 40px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .side-img {
+        display: none;
+    }
+
+    .content h1 {
+        font-size: 20px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+}
+
+.about {
+    width: 100%;
+    height: 100%;
+    color:var(--color4) !important;
+    text-align: center;
+}
+
+.about > h1{
+    font-size:40px;
+    padding-top:50px;
+    padding-bottom: 50px;
+}
+
+.about p{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+.card-container{
+    width:100%;
+    height:70%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+
+    width:20%;
+    height:80%;
+    box-shadow: 1px 1px 10px black;
+    margin:auto;
+    border-radius: 10px;
+    transition: transform 1s ease;
+}
+
+
+.card:hover{
+    transform: scale(110%);
+
+
+}
